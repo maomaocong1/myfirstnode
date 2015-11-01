@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+<meta charset="utf-8"/>
+<title>【百度糯米】高品质团购网站</title>
+<meta name="location" content="province=浙江;city=杭州;coord=">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" >
+<meta name="apple-mobile-web-app-capable" content="yes" >
+<meta name="keywords" content="百度糯米，糯米网，糯米团购，百度糯米团购，糯米团，百度糯米网" />
+<meta name="description" content="百度糯米团购-消费者满意度最好的团购网站，美食、KTV、电影、酒店团购低至3折！更有全网最低价商品折扣，一流的团购服务，100%品质保证。" />
+<link rel="apple-touch-startup-image" href="/static/img/apple-touch/start.png">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/static/img/apple-touch/logo-57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/img/apple-touch/logo-72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/img/apple-touch/logo-114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/img/apple-touch/logo-144.png" />
+<link rel="shortcut icon" href="/static/img/favicon.ico" />
+
+
+<script>
+// 判断支付宝环境，逻辑同widget/util/channel:isAlipay
+if (
+(navigator.userAgent && navigator.userAgent.indexOf('AlipayClient') >= 0) ||
+document.cookie.indexOf('channel=sns_zhifubao_wap') >= 0
+) {
+document.write('<script defer src="https://static.alipay.com/aliBridge/1.0.0/aliBridge.min.js"><\/script>');
+}
+</script>
+<script>
+var resourceMap = ({
+    "cate-list": [
+        "http://newebapp0.nuomi.bdimg.com/static/page/cate-list/cate-list.d0fac9fb8edc1d34e7dc.js",
+        "http://newebapp0.nuomi.bdimg.com/static/page/cate-list/cate-list.0d4b7a62529b50a64845cde53dadcabd.css"
+    ],
+    "cbd-detail": [
+        "http://newebapp0.nuomi.bdimg.com/static/page/cbd-detail/cbd-detail.9837c363aaf40eb98ef3.js",
+        "http://newebapp0.nuomi.bdimg.com/static/page/cbd-detail/cbd-detail.996b09e5c2ea9c496689e9795de966a5.css"
+    ],
+    "cbd-list": [
+        "http://newebapp0.nuomi.bdimg.com/static/page/cbd-list/cbd-list.e856c2ae06e3eb544b22.js",
+        "http://newebapp0.nuomi.bdimg.com/static/page/cbd-list/cbd-list.ba3527c60d5ba8568170b022b326f17c.css"
+    ],
+    "common": [
+        "http://newebapp0.nuomi.bdimg.com/static/page/common/common.c0e2f449a260cf4dbd1c.js",
+        "http://newebapp0.nuomi.bdimg.com/static/page/common/common.8228c60804c6353c4543cc27c228ea3a.css"
+    ],
+    "detail": [
+        "http://newebapp0.nuomi.bdimg.com/static/page/detail/detail.7ef996513e5c7a1828d0.js",
+        "http://newebapp0.nuomi.bdimg.com/static/page/detail/detail.55d17a50963e926d39e5aebe0540543c.css"
+    ],
+    "index": [
+        "http://newebapp0.nuomi.bdimg.com/static/page/index/index.e8b5af1c3ccd588c7750.js",
+        "http://newebapp0.nuomi.bdimg.com/static/page/index/index.a737b9a8b79bb9165739da09354ab7cc.css"
+    ],
+    "list": [
+        "http://newebapp0.nuomi.bdimg.com/static/page/list/list.5aeb344a5cf67c81b5cc.js",
+        "http://newebapp0.nuomi.bdimg.com/static/page/list/list.3059337bc3cafc2c8f29fa8b56bd2aaa.css"
+    ],
+    "mall-detail": [
+        "http://newebapp0.nuomi.bdimg.com/static/page/mall-detail/mall-detail.f22d67bbcbb6b00e3f79.js",
+        "http://newebapp0.nuomi.bdimg.com/static/page/mall-detail/mall-detail.c0e661655be88ea2e5a00712726a1c2e.css"
+    ],
+    "merchant-detail": [
+        "http://newebapp0.nuomi.bdimg.com/static/page/merchant-detail/merchant-detail.fc66913f7155fe7bede1.js",
+        "http://newebapp0.nuomi.bdimg.com/static/page/merchant-detail/merchant-detail.b606b0a4c80b814ff339c6ad52f8dcf0.css"
+    ],
+    "na-food-insurance": [
+        "http://newebapp0.nuomi.bdimg.com/static/page/na-food-insurance/na-food-insurance.9c51441842151591eb0a.js",
+        "http://newebapp0.nuomi.bdimg.com/static/page/na-food-insurance/na-food-insurance.8039e9f65a35228b30a4b7499ee19c8b.css"
+    ],
+    "simple-list": [
+        "http://newebapp0.nuomi.bdimg.com/static/page/simple-list/simple-list.0fbd8e58440454decfaf.js",
+        "http://newebapp0.nuomi.bdimg.com/static/page/simple-list/simple-list.20d80ea0fb2effe4a582f8308ecdfe75.css"
+    ],
+    "submission": [
+        "http://newebapp0.nuomi.bdimg.com/static/page/submission/submission.ea7e96bc6d1e935a8254.js",
+        "http://newebapp0.nuomi.bdimg.com/static/page/submission/submission.653bd69f032f4d51f63874bdea4455f4.css"
+    ],
+    "user-balance": [
+        "http://newebapp0.nuomi.bdimg.com/static/page/user-balance/user-balance.c3af9c5f9bd44c3503a5.js",
+        "http://newebapp0.nuomi.bdimg.com/static/page/user-balance/user-balance.ee2b91f2fc3230b0abf6ce0022a8a9a2.css"
+    ],
+    "user-balance-help": [
+        "http://newebapp0.nuomi.bdimg.com/static/page/user-balance-help/user-balance-help.353a66eecb6f8657c179.js",
+        "http://newebapp0.nuomi.bdimg.com/static/page/user-balance-help/user-balance-help.23bef1f90af40f575b0d3ced892cfebf.css"
+    ],
+    "user-voucher": [
+        "http://newebapp0.nuomi.bdimg.com/static/page/user-voucher/user-voucher.d9a310b2fae7ba9a325d.js",
+        "http://newebapp0.nuomi.bdimg.com/static/page/user-voucher/user-voucher.bfdb08e839d1dda495d2549176ce29a2.css"
+    ],
+    "user-voucher-help": [
+        "http://newebapp0.nuomi.bdimg.com/static/page/user-voucher-help/user-voucher-help.489b401998dbb794372a.js",
+        "http://newebapp0.nuomi.bdimg.com/static/page/user-voucher-help/user-voucher-help.dd3ea3ed9021880cae7747a3cb25c733.css"
+    ]
+});
+var commonAssets = resourceMap['common'] || [];
+var assets = resourceMap['index'] || [];
+// js
+var head = document.getElementsByTagName('head')[0];
+var insertScript = function (url) {
+// 使用appendChild插入script的话defer不靠谱:当从缓存读取js文件的时候，会无法保证在domready之后执行，也无法保证执行顺序
+document.write('<script charset="utf-8" defer src="' + url + '"><\/script>');
+};
+// css
+var insertStyle = function (url) {
+document.write('<link rel="stylesheet" href="' + url + '">');
+};
+// insert assets
+var styles = [];
+var scripts = [];
+commonAssets.concat(assets).forEach(function (asset) {
+if (/\.js$/.test(asset)) {
+scripts.push(asset);
+return;
+}
+if (/\.css$/.test(asset)) {
+styles.push(asset);
+return;
+}
+});
+styles.forEach(insertStyle);
+scripts.forEach(insertScript);
+</script>
+
+<script>
+window.F = (function () {
+var b = {};
+return {
+context: function(p, r) {
+var q = arguments.length;
+if (q > 1) {
+b[p] = r
+} else {
+if (q == 1) {
+if (typeof p == "object") {
+for (var o in p) {
+if (p.hasOwnProperty(o)) {
+b[o] = p[o]
+}
+}
+} else {
+return b[p];
+}
+}
+}
+}
+}
+})();
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement('script');
+hm.src = '//hm.baidu.com/hm.js?0d631c1cdc3af1f31d3fc673f262f1c2';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>
+(function () {
+if (!(!('performance' in window) || !('getEntriesByType' in window.performance) || !(window.performance.getEntriesByType('resource') instanceof Array))) {
+var LOG_REQUEST_URL = window.location.host.indexOf('m.nuomi.com') !== -1 ? 'http://m.nuomi.com/v.gif?' : 'http://www.nuomi.com/v.gif?';
+window.addEventListener('load', function () {
+/* 不延后一点，loadEventEnd取不到*/
+setTimeout(function () {
+var events = [
+'navigationStart',
+'redirectStart',
+'redirectEnd',
+'fetchStart',
+'domainLookupStart',
+'domainLookupEnd',
+'connectStart',
+'connectEnd',
+'secureConnectionStart',
+'requestStart',
+'responseStart',
+'responseEnd',
+'domLoading',
+'domInteractive',
+'domContentLoadedEventStart',
+'domContentLoadedEventEnd',
+'domComplete',
+'loadEventStart',
+'loadEventEnd'
+];
+var timing = window.performance.timing;
+var zero = timing.navigationStart;
+var mon = document.body.getAttribute('mon') || 'page=unknown';
+var query = ['performance=1', 'zero=' + zero, mon];
+for (var i = 0; i < events.length; i++) {
+var event = events[i];
+var eventTime = timing[event];
+if (typeof eventTime !== 'undefined') {
+var delta = eventTime - zero;
+query.push(event + '=' + (delta < 0 ? 0 : delta));
+}
+}
+var img = document.createElement('img');
+img.style.display = 'none';
+document.body.appendChild(img).src = LOG_REQUEST_URL + query.join('&');
+img.onload = function () {
+document.body.removeChild(img);
+img = null;
+};
+}, 100);
+});
+}
+})();
+</script>
+<script>
+// 当前页面标识信息
+F.context('page-info', {
+name: 'index'
+});
+// 小流量平台命中信息
+F.context('hit', '');
+// 小流量平台统计字段
+F.context('log-info-ext', []);
+</script>
+<script>
+F.context('city-info', {"map_id":"179","pid":"600000000","is_show":"7","areaId":"600010000","areaName":"\u676d\u5dde\u5e02","shortName":"\u676d\u5dde","areaSpell":"hangzhou","order":"300","domainUrl":"hz"});
+F.context('back-optimize', true);
+F.context('is-dayuecheng', 0);
+</script>
+</head>
+<body class="index-page" mon="position=index">
+<script>
+F.context('urls', {
+logout: "http:\/\/wappass.baidu.com\/passport\/?logout&u=http%3A%2F%2Fm.nuomi.com%2Fwebapp%2Fuser%2Flogoutaccount&tpl=nuomi"});
+F.context('ad-bottom', {
+data: {"ad_type":"download_banner","data":{"adId":1817268,"adName":"","type":2,"linkUrl":"http:\/\/d.nuomi.com\/","imgUrl":"http:\/\/hiphotos.baidu.com\/bainuo\/pic\/item\/3801213fb80e7beccb77ed662a2eb9389a506b8c.jpg","sid":null,"is_new":null,"height":"90","width":"640","download":"http:\/\/d.nuomi.com?1010036g"},"ad_id":"fc96a568a7d1a18a19c6adec0c59d311"},
+isShow: true});
+</script>
+
+<header id="header" class="header-wrapper index-header" mon="area=header&action=click&element_type=nav">
+<a class="city-link" href="http://m.nuomi.com/city" mon="area=changeCity&element=changeCity">
+<span class="city-name">杭州</span>
+<i class="arrow-down"></i>
+</a>
+<a class="user-center-link" href="http://m.nuomi.com/webapp/user/mine" mon="area=my&element=my">
+<i class="user"></i>我的
+</a>
+<div class="title"></div>
+</header>
+<article class="main-content" mon="action=click">
+<section id="index-search-wrapper">
+
+<form class="index-search" method="get" action="/webapp/tuan/list" data-role="form">
+<div class="input-wrapper">
+<input class="input" type="search" name="kw" maxlength="20" data-role="input" autocomplete="off" placeholder="请输入您想找的团购"/>
+<i class="clear" data-role="clear"></i>
+<button class="submit" type="submit" data-role="submit"></button>
+</div>
+<div class='cancel' data-role="cancel">关闭</div>
+<div class="suggestion-wrapper" data-role="suggestion-wrapper"></div>
+</form>
+</section>
+<section class="index-block">
+<div id="banner-wrapper" class="banner-wrapper" mon="action=click&area=topBanner&element_type=nav" style="padding-top:20%">
+<script>
+F.context('banner-list', [{"adId":3922624,"adName":"\u5f00\u5b66\u5b63\u4e3b\u4f1a\u573a","type":2,"linkUrl":"http:\/\/huodong.nuomi.com\/actshow\/mobile\/common\/short\/kaixuejizhuhuichang_wap?allcity=1","imgUrl":"http:\/\/hiphotos.baidu.com\/bainuo\/pic\/item\/d62a6059252dd42a49aadff8053b5bb5c8eab8c6.jpg","sid":null,"is_new":null,"height":"144","width":"720"},{"adId":3997862,"adName":"\u7b2c\u4e8c\u5f20\u996d\u5361","type":2,"linkUrl":"http:\/\/huodong.nuomi.com\/actshow\/mobile\/common\/short\/9.6tongyong-wap?allcity=1","imgUrl":"http:\/\/hiphotos.baidu.com\/bainuo\/pic\/item\/060828381f30e9243c0938664a086e061d95f73c.jpg","sid":null,"is_new":null,"height":"144","width":"720"},{"adId":4266222,"adName":"\u70ed\u6620\u4f73\u7247","type":2,"linkUrl":"http:\/\/m.dianying.baidu.com\/activity\/select\/hot2?sfrom=newnuomi&sfrom=newnuomi&from=webapp&sub_channel=nuomi_focus_wap_web_ryjp","imgUrl":"http:\/\/hiphotos.baidu.com\/bainuo\/pic\/item\/a50f4bfbfbedab64203fb39bf136afc379311e1f.jpg","sid":null,"is_new":null,"height":"144","width":"720"},{"adId":2561793,"adName":"NA\u5bfc\u6d41","type":2,"linkUrl":"http:\/\/d.nuomi.com\/?1010036v","imgUrl":"http:\/\/hiphotos.baidu.com\/bainuo\/pic\/item\/0bd162d9f2d3572c47ee62f38c13632762d0c395.jpg","sid":null,"is_new":null,"height":"144","width":"720"}]);
+</script>
+</div>
+</section>
+
+<section class="index-catg" mon="area=class">
+<ul id="catg-wraps" class="wraps">
+<li class="wrap wrap8">
+<a class="item item1" href="http://m.nuomi.com/hz/326/0-0/0-0-0-0-0" mon="position=1&content=美食">
+<div class="img meishi"></div>
+<div class="text">
+美食</div>
+</a>
+<a class="item item2" href="http://m.nuomi.com/movie?pre=home" mon="position=2&content=电影">
+<div class="img dianying"></div>
+<div class="text">
+电影<span class="ad-name">&nbsp;·&nbsp;选座</span>
+</div>
+</a>
+<a class="item item3" href="http://m.nuomi.com/hz/642/0-0/0-0-0-0-0" mon="position=3&content=酒店">
+<div class="img jiudian"></div>
+<div class="text">
+酒店</div>
+</a>
+<a class="item item4" href="http://m.nuomi.com/hz/320/0-0/0-0-0-0-0" mon="position=4&content=休闲娱乐">
+<div class="img yule"></div>
+<div class="text">
+休闲娱乐</div>
+</a>
+<a class="item item5" href="http://m.nuomi.com/hz/364/0-0/0-0-0-0-0" mon="position=5&content=火锅">
+<div class="img huoguo"></div>
+<div class="text">
+火锅</div>
+</a>
+<a class="item item6" href="http://m.nuomi.com/hz/392/0-0/0-0-0-0-0" mon="position=6&content=自助餐">
+<div class="img zizhucan"></div>
+<div class="text">
+自助餐</div>
+</a>
+<a class="item item7" href="http://m.nuomi.com/hz/1000107/0-0/0-0-0-0-0" mon="position=7&content=代金券">
+<div class="img daijinquan"></div>
+<div class="text">
+代金券</div>
+</a>
+<a class="item item8" href="http://m.nuomi.com/hz/341/0-0/0-0-0-0-0" mon="position=8&content=KTV">
+<div class="img ktv"></div>
+<div class="text">
+KTV</div>
+</a>
+</li>
+<li class="wrap wrap8">
+<a class="item item1" href="http://m.nuomi.com/hz/380/0-0/0-0-0-0-0" mon="position=9&content=小吃快餐">
+<div class="img xiaochi-2"></div>
+<div class="text">
+小吃快餐</div>
+</a>
+<a class="item item2" href="http://m.nuomi.com/hz/881/0-0/0-0-0-0-0" mon="position=10&content=蛋糕">
+<div class="img dangao-2"></div>
+<div class="text">
+蛋糕</div>
+</a>
+<a class="item item3" href="http://m.nuomi.com/hz/316/0-0/0-0-0-0-0" mon="position=11&content=生活服务">
+<div class="img shenghuo-2"></div>
+<div class="text">
+生活服务</div>
+</a>
+<a class="item item4" href="http://m.nuomi.com/hz/330/0-0/0-0-0-0-0" mon="position=12&content=购物">
+<div class="img gouwu-2"></div>
+<div class="text">
+购物</div>
+</a>
+<a class="item item5" href="http://m.nuomi.com/hz/955/0-0/0-0-0-0-0" mon="position=13&content=丽人">
+<div class="img liren-2"></div>
+<div class="text">
+丽人</div>
+</a>
+<a class="item item6" href="http://m.nuomi.com/hz/338/0-0/0-0-0-0-0" mon="position=14&content=温泉洗浴">
+<div class="img xiyu-2"></div>
+<div class="text">
+温泉洗浴</div>
+</a>
+<a class="item item7" href="http://m.nuomi.com/hz/1000000/0-0/0-0-0-0-0" mon="position=15&content=今日新单">
+<div class="img jinri-2"></div>
+<div class="text">
+今日新单</div>
+</a>
+<a class="item item8" href="http://m.nuomi.com/webapp/tuan/category" mon="position=16&content=更多分类">
+<div class="img gengduo-2"></div>
+<div class="text">
+更多分类</div>
+</a>
+</li>
+</ul>
+<div id="catg-pointers" class="pointers"></div>
+</section>
+
+<section id="j-index-topten" style="display:none;">
+
+<a href="javascript:;" class="link">
+<div class="hd">
+<h4 class="title">精选品牌</h4>
+<div class="countdown"></div>
+</div>
+<div class="content">
+<div class="loading">
+<div class="spinner">
+<div class="rect1"></div>
+<div class="rect2"></div>
+<div class="rect3"></div>
+<div class="rect4"></div>
+<div class="rect5"></div>
+</div>
+加载中
+</div>
+</div>
+</a>
+</section>
+<section id="ad-static-container">
+</section>
+<section id="mall-block" class="index-block" mon="action=click&area=market_list&element_type=item" style="display:none;">
+<h3 class="mall-title">
+推荐商场
+</h3>
+<div id="mall-container" class="mall-container"></div>
+</section>
+<section id="cbd-block" class="index-block" mon="action=click&area=cbd_list&element_type=item" style="display:none;">
+<h3 class="cbd-title">
+推荐商圈
+</h3>
+<div id="cbd-container"></div>
+</section>
+<section class="index-block">
+<h3 class="goods-list-title">
+猜你喜欢
+<a class="goods-list-more-link" href="/webapp/tuan/list"  mon="area=findAll&element=findAll">全部团购</a>
+</h3>
+</section>
+<section id="goods-container" mon="action=click&area=itemList&element_type=item">
+<div class="loading-block">
+<div class="spinner">
+<div class="rect1"></div>
+<div class="rect2"></div>
+<div class="rect3"></div>
+<div class="rect4"></div>
+<div class="rect5"></div>
+</div>
+加载中
+</div>
+</section>
+<section class="view-all">
+<a class="view-all-link" href="http://m.nuomi.com/webapp/tuan/list">查看全部团购</a>
+</section>
+</article>
+
+<footer id="footer" class="footer">
+<section class="info-block" data-role="info-block">
+<div class="city-wrap">
+<span class="city-label">城市：</span>
+<a href="/city?returnUrl=" class="info-link city-link" data-role="city-link" mon="area=botCity">
+杭州</a>
+</div>
+<div class="login-wrap" data-role="login-block" style="display:none;">
+<a href="/webapp/user/register?backUrl=" class="info-link" data-role="register-link" mon="area=register">注册</a>
+<a href="/webapp/user/login?backUrl=" class="info-link" data-role="login-link" mon="area=login">登录</a>
+</div>
+<div class="user-wrap" data-role="user-block" style="display:none;">
+<a href="/webapp/user/unpay?type=1" class="info-link" data-role="unpaid" mon="element=daifukuan">待付款</a>
+<a href="/webapp/user/orderlist?type=1&status=1" class="info-link" data-role="ticket" mon="element=miQuan">糯米券</a>
+</div>
+</section>
+<section class="link-block" mon="area=botNav">
+<a href="/" class="link" mon="element=home">首页</a>
+<a href="http://www.nuomi.com?jfd" class="link" mon="element=pc">电脑版</a>
+<a href="http://download.nuomi.com/d?ddyh" class="link" mon="element=app">客户端</a>
+<a href="/webapp/common/staticfeedback" class="link" mon="element=feedback">信息反馈</a>
+<a href="/webapp/common/statichelp" class="link" mon="element=help">帮助</a>
+</section>
+<section class="copyright-block">
+&copy;nuomi.com 京ICP证060807号
+</section>
+</footer>
+</body>
+</html>

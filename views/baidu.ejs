@@ -1,0 +1,434 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="always" name="referrer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="stylesheets/mycss.css">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/myjs.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheets/mobile.css" media="screen and (max-width:600px)">
+    <link rel="stylesheet" type="text/css" href="stylesheets/mybaiducss.css" media="screen and (min-width:600px)">
+    <title>百度一下，你就知道</title>
+</head>
+<body>
+<nav class="mynav">
+    <div class="mynav_left">
+        <iframe width="280" scrolling="no" height="25" frameborder="0" allowtransparency="true"
+                src="http://i.tianqi.com/index.php?c=code&id=34&icon=1&num=3"></iframe>
+    </div>
+    <div class="mynav_middle">
+        <ul class="mynav_middle_info">
+            <li><a class="lw" href="#">宝箱</a></li>
+            <li><a class="lw" href="#">换肤</a></li>
+            <li><a class="lw" href="#">信息</a></li>
+            <li><a class="lw " id="showcard" href="#">隐藏卡片</a></li>
+        </ul>
+    </div>
+    <div class="mynav_right">
+        <div id="u1"><a href="http://news.baidu.com/" name="tj_trnews" class="mnav">新闻</a>
+            <a href="http://www.hao123.com/" name="tj_trhao123" class="mnav">hao123</a>
+            <a href="http://map.baidu.com/" name="tj_trmap" class="mnav">地图</a>
+            <a href="http://v.baidu.com/" name="tj_trvideo" class="mnav">视频</a>
+            <a href="http://tieba.baidu.com/" name="tj_trtieba" class="mnav">贴吧</a>
+            <a href="https://passport.baidu.com" id="usrname" class="lw">maomaocong1</a>
+            <a href="http://www.baidu.com/gaoji/preferences.html" name="tj_settingicon" id="config" class="lw">设置</a>
+            <a href="#" class="pro" id="moretitle" value="">更多产品</a>
+        </div>
+        <div class="logininfo">
+            <div id="logininfo" style="display: none;">
+                <div class="sanjiao">
+                    <div class="sanjiao1">
+
+                    </div>
+                </div>
+                <ul>
+                    <li class="huise"><a href="#">我的VIP&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    <li class="huise"><a href="#">个人中心&nbsp;&nbsp;</a></li>
+                    <li class="huise"><a href="#">帐号设置&nbsp;&nbsp;</a></li>
+                    <li class="huise"><a href="#">问题反馈&nbsp;&nbsp;</a></li>
+                    <li class="huise"><a href="#">退出&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="settinginfo">
+            <div id="wrapper_wrapper" style="display: none;">
+                <div class="sanjiao">
+                    <div class="sanjiao1">
+
+                    </div>
+                </div>
+                <ul>
+                    <li class="huise"><a href="#">搜索设置</a></li>
+                    <li class="huise"><a href="#">高级搜索</a></li>
+                    <li class="huise"><a href="#">开启预测</a></li>
+                    <li class="huise"><a href="#">搜索历史</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="morep" id="morepro">
+            <div class="morep text-center">
+                <span class="span1">更多产品</span>
+                <a href="http://www.nuomi.com/?cid=002540" name="tj_nuomi"><span class="bdbriimgitem_1"></span>糯米</a>
+                <a href="http://zhidao.baidu.com" name="tj_zhidao"><span
+                        class="morep_1"></span>知道</a><a href="http://music.baidu.com" name="tj_mp3"><span
+                    class="morep_2"></span>音乐</a><a href="http://image.baidu.com" name="tj_img"><span
+                    class="morep_3"></span>图片</a><a href="http://wenku.baidu.com" name="tj_wenku"><span
+                    class="morep_4"></span>文库</a><a href="http://top.baidu.com" name="tj_bang"><span
+                    class="morep_5"></span>风云榜</a><a href="http://e.baidu.com/?refer=888"
+                                                     name="tj_tuiguang"><span class="morep_6"></span>百度推广</a>
+
+                <div class="bdbrievenmore"><a href="//www.baidu.com/more/" name="tj_more">全部产品&gt;&gt;</a></div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div id="wrapper">
+    <div id="head">
+        <div class="head_wrapper">
+            <div class="s_form">
+                <div class="s_form_wrapper">
+                    <div id="lg"><img hidefocus="true" class="imglogo" src="images/bd_logo1.png">
+                    </div>
+                    <div class="txt">
+                        <input id="kw" name="wd" class="s_ipt" value="" maxlength="255"
+                               autocomplete="off" autofocus=""><span class="bg s_btn_wr"><input
+                            type="submit" id="su" value="百度一下" class="bg s_btn"></span>
+                    </div>
+                    <div id="m"></div>
+                </div>
+                <div class="s_card">
+                    <div class="s_card_box">
+                        <div class="s_card_left">
+                            <ul class="nav_item">
+                                <li id="item1" class="active"><a class="xinwen" href="#">新闻</a></li>
+                                <li id="item2"><a class="music" href="#">音乐</a></li>
+                            </ul>
+                            <a href="https://www.baidu.com/#" class="config"><span class="configtb"> </span></a>
+                        </div>
+                        <div class="s_card_main">
+                            <div id="box_xinwen">
+                                <div class="lunbo">
+                                    <div class="lunbotop">
+                                        <img src="images/lunbo1.jpg">
+                                        <img src="images/lunbo2.jpg">
+                                        <img src="images/lunbo3.jpg">
+                                        <img src="images/lunbo4.jpg">
+                                        <img src="images/lunbo5.jpg">
+                                        <img src="images/lunbo6.jpg">
+                                        <img src="images/lunbo7.jpg">
+                                        <img src="images/lunbo8.jpg">
+                                    </div>
+                                    <div class="jiantou pre-img">
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <div class="jiantou next-img">
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <div class="newsinfo">
+                                        <span><a class="active" name="1" href="#">内容1</a></span>
+                                        <span><a name="2" href="#">内容2</a></span>
+                                        <span><a name="3" href="#">内容3</a></span>
+                                        <span><a name="4" href="#">内容4</a></span>
+                                        <span><a name="5" href="#">内容5</a></span>
+                                        <span><a name="6" href="#">内容6</a></span>
+                                        <span><a name="7" href="#">内容7</a></span>
+                                        <span><a name="8" href="#">内容8</a></span>
+                                    </div>
+
+                                    <div class="lunbobottom">
+                                        <div class="lunbobottombar">
+                                            <img class="lunbo_active" src="images/lunbo1.jpg">
+                                            <img class="#" src="images/lunbo2.jpg">
+                                            <img class="#" src="images/lunbo3.jpg">
+                                            <img class="#" src="images/lunbo4.jpg">
+                                            <img class="#" src="images/lunbo5.jpg">
+                                            <img class="#" src="images/lunbo6.jpg">
+                                            <img class="#" src="images/lunbo7.jpg">
+                                            <img class="#" src="images/lunbo8.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="s_card_main_content_box">
+                                    <div class="s_card_main_content_title">
+                                        <div class="titlebox">
+                                            <a href="#"><span></span></a>
+                                            <a href="#">搜索风云榜</a>
+                                        </div>
+                                        <a class="change" href="#">换一换</a>
+                                    </div>
+                                    <div class="s_card_main_content">
+                                        <div class="hot-content">
+                                            <ul class="row">
+                                                <li class="col-xs-6"><a>教授砒霜治白血病</a></li>
+                                                <li class="col-xs-6"><a>布基纳法索政变</a></li>
+                                                <li class="col-xs-6"><a>宝马剐蹭引群斗</a></li>
+                                                <li class="col-xs-6"><a>渔民捕获巨型狼鱼</a></li>
+                                                <li class="col-xs-6"><a>高超音速飞机首飞</a></li>
+                                                <li class="col-xs-6"><a>丈夫猝死妻子遮阳</a></li>
+                                                <li class="col-xs-6"><a>骑摩托玩手机被撞</a></li>
+                                                <li class="col-xs-6"><a>林心如晒怀抱小猫</a></li>
+                                                <li class="col-xs-6"><a>女作家冷冻遗体</a></li>
+                                                <li class="col-xs-6"><a>范冰冰生日会曝光</a></li>
+                                                <li class="col-xs-6"><a>田亮晒爱女打网球</a></li>
+                                                <li class="col-xs-6"><a>切尔西2-0阿森纳</a></li>
+                                                <li class="col-xs-6"><a>情侣藏毒被抓</a></li>
+                                                <li class="col-xs-6"><a>九一八84周年</a></li>
+                                                <li class="col-xs-6"><a>椰子螺吐出美乐珠</a></li>
+                                                <li class="col-xs-6"><a>燕京学堂引争议</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="box_music">
+                                <div class="music_left">
+                                    <img src="images/music.jpg">
+                                </div>
+                                <div class="music_middle">
+                                    <img src="images/music_middle.jpg">
+                                </div>
+                                <div class="music_right">
+                                    <div class="s_card_main_content_title">
+                                        <div class="titlebox">
+                                            <a href="#"><span></span></a>
+                                            <a href="#">热门频道</a>
+                                        </div>
+                                        <a class="change" href="#">换一换</a>
+                                    </div>
+                                    <div class="hot-music">
+                                        <ul class="row">
+                                            <li class="col-xs-6"><a href="#">私人频道</a></li>
+                                            <li class="col-xs-6"><a href="#">红心频道</a></li>
+                                            <li class="col-xs-6"><a href="#">随便听听</a></li>
+                                            <li class="col-xs-6"><a href="#">欧美</a></li>
+                                            <li class="col-xs-6"><a href="#">经典老歌</a></li>
+                                            <li class="col-xs-6"><a href="#">DJ舞曲</a></li>
+                                            <li class="col-xs-6"><a href="#">热歌</a></li>
+                                            <li class="col-xs-6"><a href="#">网络红歌</a></li>
+                                            <li class="col-xs-6"><a href="#">成名曲</a></li>
+                                            <li class="col-xs-6"><a href="#">火爆新歌</a></li>
+                                            <li class="col-xs-6"><a href="#">流行</a></li>
+                                            <li class="col-xs-6"><a href="#">快乐旋律</a></li>
+                                            <li class="col-xs-6"><a href="#">KTV金曲</a></li>
+                                            <li class="col-xs-6"><a href="#">伤感调频</a></li>
+                                            <li class="col-xs-6"><a href="#">80后</a></li>
+                                            <li class="col-xs-6"><a href="#">90后</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!--<div id="u1"><a href="http://news.baidu.com/" name="tj_trnews" class="mnav">新闻</a>-->
+            <!--<a href="http://www.hao123.com/" name="tj_trhao123" class="mnav">hao123</a>-->
+            <!--<a href="http://map.baidu.com/" name="tj_trmap" class="mnav">地图</a>-->
+            <!--<a href="http://v.baidu.com/" name="tj_trvideo" class="mnav">视频</a>-->
+            <!--<a href="http://tieba.baidu.com/" name="tj_trtieba" class="mnav">贴吧</a>-->
+            <!--<a href="https://passport.baidu.com" class="lw">登录</a>-->
+            <!--<a href="http://www.baidu.com/gaoji/preferences.html" name="tj_settingicon" class="lw">设置</a>-->
+            <!--<input type="button" class="pro" value="更多产品">-->
+            <!--</div>-->
+        </div>
+    </div>
+
+    <div id="ftCon">
+        <!--<div id="ftConw"><p id="lh"><a id="setf" href="https://www.baidu.com/cache/sethelp/help.html" target="_blank"-->
+        <!--style="display: inline;">把百度设为主页</a>-->
+        <!--<a href="http://home.baidu.com/">关于百度</a>-->
+        <!--<a href="http://ir.baidu.com/">About&nbsp;&nbsp;Baidu</a></p>-->
+
+        <p id="cp"><a id="setf" href="https://www.baidu.com/cache/sethelp/help.html" target="_blank">
+            设为主页</a>©2015Baidu<a href="http://www.baidu.com/duty/">使用百度前必读</a><a href="http://jianyi.baidu.com/"
+                                                                                 class="cp-feedback">意见反馈</a>京ICP证030173号<i
+                class="c-icon-icrlogo"></i></p>
+    </div>
+</div>
+<!--<div id="wrapper_wrapper">-->
+<!--<div class="sanjiao"></div>-->
+<!--<ul>-->
+<!--<li class="huise"><a href="#">搜索设置</a></li>-->
+<!--<li class="huise"><a href="#">高级搜索</a></li>-->
+<!--<li class="huise"><a href="#">开启预测</a></li>-->
+<!--<li class="huise"><a href="#">搜索历史</a></li>-->
+<!--</ul>-->
+<!--</div>-->
+</div>
+
+<div class="container-fluid moblie">
+    <header class="myheader white">
+        <br/>
+        <br/>
+
+        <div class="container text-center"><img src="images/plus_logo.png" class="mylogo text-center">
+        </div>
+        <br/>
+        <br/>
+
+        <div class="container-fluid text-center">
+            <div class="input-group">
+                <input type="text" class="form-control hi42 white" placeholder="" aria-describedby="basic-addon2">
+                <span class="input-group-addon hi42" id="basic-addon2">百度一下</span>
+            </div>
+            <div class="row mynav1">
+            <div class="navbar1 col-xs-2"><span class="glyphicon glyphicon-book" aria-hidden="true"></span><br/> <a href="baidu/baidunews">新闻</a>
+                </div>
+                <div class="navbar1 col-xs-2"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> <br/> 小说
+                </div>
+                <div class="navbar1 col-xs-2"><span class="glyphicon glyphicon-film" aria-hidden="true"></span> <br/> 视频
+                </div>
+                <div class="navbar1 col-xs-2"><span class="glyphicon glyphicon-leaf" aria-hidden="true"></span> <br/> 生活
+                </div>
+                <div class="navbar1 col-xs-2"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                    <br/> 地图
+                </div>
+                <div class="navbar1 col-xs-2"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                    <br/> 更多
+                </div>
+            </div>
+        </div>
+    </header>
+    <br/>
+
+    <div class="container-fluid myarticle">
+
+        <div class="cywz white ">
+            <div class="cywz_bar"><img src="images/icon-ball.jpg">常用网址<img src="images/icon-threedot.jpg"
+                                                                        class="iconthreedot"></div>
+            <div class="row  cywz_item text-center">
+                <div class="cywz_item col-xs-3">贴吧</div>
+                <div class="cywz_item col-xs-3">hao123</div>
+                <div class="cywz_item col-xs-3">地图</div>
+                <div class="cywz_item col-xs-3">应用</div>
+                <div class="cywz_item col-xs-3">图片</div>
+                <div class="cywz_item col-xs-3">音乐</div>
+                <div class="cywz_item col-xs-3">+</div>
+            </div>
+
+        </div>
+
+        <div class="ssrd white ">
+            <div class="cywz_bar"><img src="images/icon-ssrd.jpg">实时热点<img src="images/icon-chexiao.jpg" class="jiange"><span>换一批</span>
+                <img src="images/icon-threedot.jpg" class="iconthreedot"></div>
+            <div class="row  cywz_item">
+                <div class="cywz_item col-xs-6">考研时间公布</div>
+                <div class="cywz_item col-xs-6">胡军与女儿亲吻</div>
+                <div class="cywz_item col-xs-6">内地导演评分出炉</div>
+                <div class="cywz_item col-xs-6">苹果官网维护</div>
+                <div class="cywz_item col-xs-6">青岛渔民破经录</div>
+                <div class="cywz_item col-xs-6">高校食常发生闪爆</div>
+            </div>
+
+        </div>
+        <div class="shfu white ">
+            <div class="cywz_bar"><img src="images/icon-shfw.jpg">生活服务<img src="images/icon-threedot.jpg"
+                                                                        class="iconthreedot"></div>
+            <div class="cywz_bar"><span>点击定位，查看附近位置信息</span>
+
+                <div class="iconthreedot">
+                    <button class="btn btn-xs btn-default white"><img src="images/icon-dingwei.jpg">定位</button>
+                </div>
+                <div class="row  cywz_item">
+                    <div class="cywz_item col-xs-3 text-center left15"><img src="images/icon-film.jpg">
+
+                        <p>电影</p></div>
+                    <div class="cywz_item col-xs-3 text-center left15"><img src="images/icon-tuangou.jpg">
+
+                        <p>团购</p></div>
+                    <div class="cywz_item col-xs-3 text-center left15"><img src="images/icon-waimai.jpg">
+
+                        <p>外卖</p></div>
+                    <div class="cywz_item col-xs-3 text-center left15"><img src="images/icon-dache.jpg">
+
+                        <p>打车</p></div>
+                    <div class="cywz_item col-xs-3 text-center left15"><img src="images/icon-hotel.jpg">
+
+                        <p>酒店</p></div>
+                    <div class="cywz_item col-xs-3 text-center left15"><img src="images/icon-meisi.jpg">
+
+                        <p>美食</p></div>
+                    <div class="cywz_item col-xs-3 text-center left15"><img src="images/icon-ktv.jpg">
+
+                        <p>KTV</p></div>
+                    <div class="cywz_item col-xs-3 text-center left15"><img src="images/icon-bank.jpg">
+
+                        <p>银行</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="dyp white ">
+            <div class="cywz_bar"><img src="images/icon-filepacket.jpg">电影票<img src="images/icon-chexiao.jpg"
+                                                                             class="jiange"><span>换一部</span><img
+                    src="images/icon-threedot.jpg" class="iconthreedot"></div>
+            <div class="row  cywz_item">
+                <div class="dyp_item cywz_item"><img class="dyp_item " src="images/icon-dahuangfeng.jpg">
+
+                    <div class="dyp_item"><span class="">小黄人大眼萌</span><img src="images/icon-3d.jpg">
+
+                        <p class="gray"><span class="orange">8.2</span>分&nbsp;动画&nbsp;喜剧&nbsp;家庭</p>
+
+                        <p class="gray">&lt;新偷奶爸&gt;系列的犀利前传</p>
+                        <button class="btn btn-default btn-sm font-white btn-warning">立即购票</button>
+                    </div>
+
+                </div>
+                <div class="moreinfo col-xs-12 text-right">
+                    <a>更多热映电影&gt;</a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="jtlk white ">
+            <div class="cywz_bar"><img src="images/icon-jt.jpg">交通路况 <img src="images/icon-threedot.jpg" class="iconthreedot">
+            </div>
+            <div class="row jtlk_item">
+                <br/>
+
+                <div class="col-xs-12 text-center font15"><a>设置家和公司地址</a></div>
+                <br/>
+
+                <div class="col-xs-12 text-center"><span>随时随地，了解实时路况</span></div>
+            </div>
+        </div>
+
+        <div class="config white jtlk">
+            <div class="row">
+
+                <div class="col-xs-12 text-center config_item"><a><img src="images/icon-config.jpg">管理我的首页</a></div>
+            </div>
+        </div>
+        <ul class="list-group list_box">
+            <li class="list-group-item"><img src="images/icon-hot.jpg">百度浏览器，上网提速200%<img src="images/icon-more.jpg"
+                                                                                       class="iconthreedot"></li>
+            <li class="list-group-item"><img src="images/icon-baidu.jpg">手机百度，最省流量的极速搜索APP<img src="images/icon-more.jpg"
+                                                                                            class="iconthreedot"></li>
+            <li class="list-group-item"><img src="images/icon-hot.jpg">百度推广，让有需求的客户找到你<img src="images/icon-more.jpg"
+                                                                                        class="iconthreedot"></li>
+        </ul>
+        <div class="white">
+            <div class="row text-center">
+                <button type="button" class="btn btn-default col-xs-6 white">极速版</button>
+                <button type="button" class="btn btn-default col-xs-6 white">用户反馈</button>
+            </div>
+        </div>
+        <footer class="copyright gray_light text-center">使用百度前必读&nbsp; Baidu&nbsp;京ICP证030173号</footer>
+    </div>
+
+</div>
+</body>
+</html>

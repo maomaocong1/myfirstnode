@@ -1,0 +1,158 @@
+body{
+    font-family: Arial,Helvetica,sans-serif;
+    cursor: pointer;
+
+}
+.moblie{
+    display: block;
+    padding: 0;
+    background-color:#f7f7f7;
+}
+
+#wrapper{
+    display: none;
+}
+.white{
+    background: #ffffff;
+}
+
+.mynav1{
+    margin-top: 17px;
+    margin-bottom: 14px;
+}
+.mynav1 a:link,a:visited,a:hover{
+    color: #000000;
+}
+.myheader{
+    height: 269px;
+}
+.myarticle{
+  margin-top: 0;
+    height: 42px;
+}
+.cywz{
+    height: 123px;
+    color: #cccccc;
+    border: 1px solid #cccccc;
+    display: block;
+}
+.iconthreedot{
+    margin-top: -4px;
+    float: right;
+}
+.cywz_bar{
+
+margin-top: 10px;
+padding-left: 15px;
+}
+.cywz_item{
+    margin-top: 10px;
+    color: #1f1f1f;
+    padding-left: 5%;
+}
+.mylogo{
+    width: 172px;
+    height: 55px;
+}
+.hi42{
+    height: 42px;
+    font-size: 18px;
+    color: #46484b;
+    border: 1px solid #878c8f;
+    border-radius: 0;
+    margin: 0;
+    resize: none;
+    overflow: hidden;
+    font-family: Arial,Helvetica,sans-serif;
+}
+.mynav1{
+    height: 43px;
+}
+.ssrd{
+    height: 165px;
+    margin-top: 10px;
+    color: #cccccc;
+    border: 1px solid #cccccc;
+}
+
+.jiange{
+    /*//实时热点和换一批的间隔*/
+    margin-left: 60%;
+}
+.ssrd span{
+    color:#46484b ;
+}
+
+.shfu span{
+    color:#46484b ;
+}
+.shfu{
+    margin-top: 10px;
+    padding-top: 5px;
+    color: #cccccc;
+    border: 1px solid #cccccc;
+}
+.left15{
+    left: -15px;
+}
+.dyp{
+    margin-top: 20px;
+    height: 202px;
+    border: 1px solid #cccccc;
+}
+.gray{
+color: #646464;
+}
+.gray_light{
+    color: #cccccc;
+}
+p .orange{
+    color: orange;
+}
+.font-white{
+    font-size: 15px;
+    color: white;
+    font-weight: 100;
+}
+.dyp_item{
+    color: #cccccc;
+    float: left;
+    margin-left: 10px;
+}
+.dyp_item span{
+    color: #46484b;
+
+}
+.moreinfo{
+    float: right;
+    margin-bottom: 0;
+    /*margin-left: 100%;*/
+}
+.jtlk{
+    color: #cccccc;
+    margin-top: 10px;
+    padding-top: 5px;
+    height: 137px;
+    border: 1px solid #cccccc;
+}
+.jtlk_item span{
+    color: #46484b;
+
+}
+.config{
+    color: #cccccc;
+    margin-top: 10px;
+    height: 47px;
+    border: 1px solid #cccccc;
+}
+.config_item{
+    padding: 10px;
+}
+
+.list_box{
+    margin-top: 10px;
+}
+
+.mynav{
+    display: none;
+}

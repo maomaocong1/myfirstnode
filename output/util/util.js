@@ -1,0 +1,1 @@
+module.exports={extend:function(r,e,n){for(var o in e)e.hasOwnProperty(o)&&(n?r[o]=e[o]:void 0===r[o]&&(r[o]=e[o]));return r}};
